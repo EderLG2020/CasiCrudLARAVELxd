@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CursoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [CursoController::class, 'index']);
+
+Route::get('/cursos', function () {
+    return "Hola xd";
 });
+
+// Route::get('/cursos/{cursito}', function($cursitoxd){
+//     return "Hola: $cursitoxd";
+// });
+
+Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']);
+
+Route::post('/cursos/create',  [CursoController::class, 'create']);
