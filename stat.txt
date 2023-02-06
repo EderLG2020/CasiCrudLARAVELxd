@@ -1,3 +1,19 @@
+commit 756e4c163468dad3e8751642194571994debe904
+Author: EderLG2020 <edermaster12@hotmail.com>
+Date:   Sun Feb 5 22:05:19 2023 -0500
+
+    3-. view, templates, group
+
+ README.md                                |   4 +-
+ app/Http/Controllers/CursoController.php |   5 +-
+ resources/views/curso/create.blade.php   |  11 ++++
+ resources/views/curso/index.blade.php    |  11 ++++
+ resources/views/curso/show.blade.php     |  29 +++++++++
+ resources/views/layouts/home.blade.php   |   0
+ routes/web.php                           |  18 ++++--
+ stat.txt                                 | 103 +++++++++++++++++++++++++++++++
+ 8 files changed, 173 insertions(+), 8 deletions(-)
+
 commit 3a8c77d10e22862add05fd1d460d491863a816dc
 Author: EderLG2020 <edermaster12@hotmail.com>
 Date:   Sun Feb 5 21:19:51 2023 -0500
