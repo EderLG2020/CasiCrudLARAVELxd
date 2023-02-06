@@ -13,16 +13,24 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', [CursoController::class, 'index']);
+Route::controller(CursoController::class)->group(function () {
+    Route::get('/', [CursoController::class, 'index']);
+    Route::get('/cursos/{cur}/{categoria?}', 'show');
 
-Route::get('/cursos', function () {
-    return "Hola xd";
+    Route::post('/cursos/create', 'create');
 });
+// Route::get('/cursos', function () {
+//     return "Hola xd";
+// });
 
 // Route::get('/cursos/{cursito}', function($cursitoxd){
 //     return "Hola: $cursitoxd";
 // });
 
-Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']);
+// Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']);
 
-Route::post('/cursos/create',  [CursoController::class, 'create']);
+// Route::post('/cursos/create',  [CursoController::class, 'create']);
+
+Route::get('/cursos', function () {
+    return "Hola xd";
+});

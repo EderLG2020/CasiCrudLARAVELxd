@@ -1,0 +1,103 @@
+commit 3a8c77d10e22862add05fd1d460d491863a816dc
+Author: EderLG2020 <edermaster12@hotmail.com>
+Date:   Sun Feb 5 21:19:51 2023 -0500
+
+    2-. RUTAS
+
+ README.md                                | 69 +++-----------------------------
+ app/Http/Controllers/CursoController.php | 24 +++++++++++
+ app/Http/Controllers/HomeController.php  | 10 +++++
+ routes/web.php                           | 16 ++++++--
+ 4 files changed, 53 insertions(+), 66 deletions(-)
+
+commit 094d08c0902fa44d89984fe1ec1e2534348cb0f1
+Author: EderLG2020 <edermaster12@hotmail.com>
+Date:   Sun Feb 5 20:21:05 2023 -0500
+
+    1-. php artisan php
+
+ .editorconfig                                      |   18 +
+ .env.example                                       |   58 +
+ .gitattributes                                     |   11 +
+ .gitignore                                         |   18 +
+ README.md                                          |   66 +
+ app/Console/Kernel.php                             |   32 +
+ app/Exceptions/Handler.php                         |   50 +
+ app/Http/Controllers/Controller.php                |   13 +
+ app/Http/Kernel.php                                |   67 +
+ app/Http/Middleware/Authenticate.php               |   21 +
+ app/Http/Middleware/EncryptCookies.php             |   17 +
+ .../PreventRequestsDuringMaintenance.php           |   17 +
+ app/Http/Middleware/RedirectIfAuthenticated.php    |   32 +
+ app/Http/Middleware/TrimStrings.php                |   19 +
+ app/Http/Middleware/TrustHosts.php                 |   20 +
+ app/Http/Middleware/TrustProxies.php               |   28 +
+ app/Http/Middleware/ValidateSignature.php          |   22 +
+ app/Http/Middleware/VerifyCsrfToken.php            |   17 +
+ app/Models/User.php                                |   44 +
+ app/Providers/AppServiceProvider.php               |   28 +
+ app/Providers/AuthServiceProvider.php              |   30 +
+ app/Providers/BroadcastServiceProvider.php         |   21 +
+ app/Providers/EventServiceProvider.php             |   42 +
+ app/Providers/RouteServiceProvider.php             |   52 +
+ artisan                                            |   53 +
+ bootstrap/app.php                                  |   55 +
+ bootstrap/cache/.gitignore                         |    2 +
+ composer.json                                      |   65 +
+ composer.lock                                      | 7872 ++++++++++++++++++++
+ config/app.php                                     |  215 +
+ config/auth.php                                    |  111 +
+ config/broadcasting.php                            |   70 +
+ config/cache.php                                   |  110 +
+ config/cors.php                                    |   34 +
+ config/database.php                                |  151 +
+ config/filesystems.php                             |   76 +
+ config/hashing.php                                 |   52 +
+ config/logging.php                                 |  122 +
+ config/mail.php                                    |  118 +
+ config/queue.php                                   |   93 +
+ config/sanctum.php                                 |   67 +
+ config/services.php                                |   34 +
+ config/session.php                                 |  201 +
+ config/view.php                                    |   36 +
+ database/.gitignore                                |    1 +
+ database/factories/UserFactory.php                 |   40 +
+ .../2014_10_12_000000_create_users_table.php       |   36 +
+ ...4_10_12_100000_create_password_resets_table.php |   32 +
+ .../2019_08_19_000000_create_failed_jobs_table.php |   36 +
+ ..._000001_create_personal_access_tokens_table.php |   37 +
+ database/seeders/DatabaseSeeder.php                |   24 +
+ lang/en/auth.php                                   |   20 +
+ lang/en/pagination.php                             |   19 +
+ lang/en/passwords.php                              |   22 +
+ lang/en/validation.php                             |  184 +
+ package.json                                       |   14 +
+ phpunit.xml                                        |   31 +
+ public/.htaccess                                   |   21 +
+ public/favicon.ico                                 |    0
+ public/index.php                                   |   55 +
+ public/robots.txt                                  |    2 +
+ resources/css/app.css                              |    0
+ resources/js/app.js                                |    1 +
+ resources/js/bootstrap.js                          |   35 +
+ resources/views/layouts/plantilla.blade.php        |   36 +
+ resources/views/welcome.blade.php                  |   11 +
+ routes/api.php                                     |   19 +
+ routes/channels.php                                |   18 +
+ routes/console.php                                 |   19 +
+ routes/web.php                                     |   18 +
+ storage/app/.gitignore                             |    3 +
+ storage/app/public/.gitignore                      |    2 +
+ storage/framework/.gitignore                       |    9 +
+ storage/framework/cache/.gitignore                 |    3 +
+ storage/framework/cache/data/.gitignore            |    2 +
+ storage/framework/sessions/.gitignore              |    2 +
+ storage/framework/testing/.gitignore               |    2 +
+ storage/framework/views/.gitignore                 |    2 +
+ storage/logs/.gitignore                            |    2 +
+ tests/CreatesApplication.php                       |   22 +
+ tests/Feature/ExampleTest.php                      |   21 +
+ tests/TestCase.php                                 |   10 +
+ tests/Unit/ExampleTest.php                         |   18 +
+ vite.config.js                                     |   11 +
+ 84 files changed, 11120 insertions(+)

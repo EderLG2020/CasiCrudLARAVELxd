@@ -6,4 +6,6 @@ Arranque:
 1. php artisan serve -> corre el codigo en el puerto 8000.
 2. php artisan make:controller MyXDController
 
-Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']); --> llama el controlador
+Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']); --> llama el controlador en la version 8 era -> ,CursoController@index
+
+Route::controller(CursoController::class)->group(function () { ... } --> Grupo de rutas
