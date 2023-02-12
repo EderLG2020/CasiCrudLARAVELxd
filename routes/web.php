@@ -33,3 +33,7 @@ Route::controller(CursoController::class)->group(function () {
 Route::get('/cursos', function () {
     return "Hola xd";
 });
+
+// Route::get('migrate', function () {
+//     \Illuminate\Support\Facades\Artisan::call('migrate:fresh -—seed');
+// });
