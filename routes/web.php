@@ -1,17 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/principalRuta', 'principal');
+    Route::get('/contactoRuta', 'contacto');
+    Route::get('/conocenosRuta/{Nombre}/{nick}', 'conocenos');
+});
+
+
 
 Route::controller(CursoController::class)->group(function () {
     Route::get('/', [CursoController::class, 'index']);
@@ -23,8 +22,8 @@ Route::controller(CursoController::class)->group(function () {
 //     return "Hola xd";
 // });
 
-// Route::get('/cursos/{cursito}', function($cursitoxd){
-//     return "Hola: $cursitoxd";
+// Route::get('/rutaxd/{nombre}', function ($nombre) {
+//     return "Hola: $nombre";
 // });
 
 // Route::get('/cursos/{cur}/{categoria?}', [CursoController::class, 'show']);
