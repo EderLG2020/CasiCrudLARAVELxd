@@ -13,6 +13,8 @@ Arranque:
 6. php artisan migrate:fresh -------------------------------> Elimina todo y lo actualiza, borra los datos
 7. php artisan make:migration add_avatar_to_users_table ----> Actualiza la tabla añade 'avatar' en users sin borrar los datos recordad que los campos nueos deben ser de ->nullable() para que no de error
 8. composer require doctrine /dbal -------------------------> Este paquete nos ayuda cambiar los requisitos de la columna '->change()'
+9. php artisan make:model Curso ----------------------------> Crea un modelo
+   10 php artisan tinker
 
 NOTAS:
 
