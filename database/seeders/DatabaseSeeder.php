@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Curso;
+use App\Models\Practicante;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,9 +23,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $curso = new Curso();
-        $curso->name = "Laravel";
-        $curso->description = "un curso de laravel 13 seeder";
-        $curso->save();
+        // // $curso = new Curso();
+        // // $curso->name = "Laravel";
+        // // $curso->description = "un curso de laravel 13 seeder";
+        // // $curso->save();
+
+        $this->call(PracticanteSeeder::class);
     }
 }

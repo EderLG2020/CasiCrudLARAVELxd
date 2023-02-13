@@ -12,6 +12,7 @@
 
 <body>
     <h1>Hola HOME</h1>
+    <p>L</p>
 @yield('MiContenido')
 </body>
 

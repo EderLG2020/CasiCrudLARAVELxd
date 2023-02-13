@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Query\Expression;
 
 return new class extends Migration
 {
@@ -14,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('practicante', function ($table) {
+        Schema::create('practicantes', function (Blueprint $table) {
             $table->id();
-            $table->text("nombre")->nullable();
-            $table->text("edad")->nullable();
+            $table->string("nombre")->nullable();
+            $table->integer("edad")->nullable();
+            $table->date("fecha_de_nacimiento")->nullable();
+            $table->string("carrera_tecnica")->nullable();
+            $table->string("escuela")->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('practicante');
+        Schema::dropIfExists('practicantes');
     }
 };
