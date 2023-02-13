@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nombre")->nullable();
             $table->integer("edad")->nullable();
+            $table->string("correo_electronico")->nullable();
             $table->date("fecha_de_nacimiento")->nullable();
             $table->string("carrera_tecnica")->nullable();
             $table->string("escuela")->nullable();
