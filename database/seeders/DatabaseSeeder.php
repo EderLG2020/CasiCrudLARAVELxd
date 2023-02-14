@@ -23,11 +23,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // // $curso = new Curso();
-        // // $curso->name = "Laravel";
-        // // $curso->description = "un curso de laravel 13 seeder";
-        // // $curso->save();
-
         $this->call(PracticanteSeeder::class);
     }
 }
