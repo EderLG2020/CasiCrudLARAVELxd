@@ -7,6 +7,7 @@ use App\Http\Controllers\CursoController;
 Route::controller(HomeController::class)->group(function () {
     Route::get('/principalRuta', 'principal');
     Route::get('/contactoRuta', 'contacto');
+    Route::get('/BaseRuta', 'base');
     Route::get('/conocenosRuta/{Nombre}/{nick}', 'conocenos');
 });
 
