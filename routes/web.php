@@ -6,9 +6,11 @@ use App\Http\Controllers\CursoController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/principalRuta', 'principal');
-    Route::get('/contactoRuta', 'contacto');
+    Route::get('/contactoRuta', 'contacto')->name('welcomewel');
     Route::get('/BaseRuta', 'base');
     Route::get('/conocenosRuta/{Nombre}/{nick}', 'conocenos');
+    Route::post('/rutaCrear', 'store')->name('crear.practicante');
+    Route::get('/rutaCrear', 'miForm')->name('form.practicante');
 });
 
 
