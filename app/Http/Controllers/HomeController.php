@@ -25,6 +25,15 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'edad' => 'required',
+            'correo_electronico' => 'required',
+            'fecha_de_nacimiento' => 'required',
+            'carrera_tecnica' => 'required',
+            'escuela' => 'required'
+        ]);
+
         $practicante = new Practicante();
         $practicante->nombre = $request->nombre;
         $practicante->edad = $request->edad;
