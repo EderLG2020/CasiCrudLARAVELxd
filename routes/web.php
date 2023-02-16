@@ -3,6 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\ProductoController;
+
+Route::controller(ProductoController::class)->group(function () {
+    Route::get('producto', 'index')->name('producto.principal');
+    Route::delete('producto/', 'destroy')->name('producto.eliminar');
+    Route::post('producto/crear', 'store')->name('producto.crear');
+    Route::put('producto/edit', 'update')->name('producto.editar');
+});
+
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/principalRuta', 'principal');
@@ -11,6 +20,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/conocenosRuta/{Nombre}/{nick}', 'conocenos');
     Route::post('/rutaCrear', 'store')->name('crear.practicante');
     Route::get('/rutaCrear', 'miForm')->name('form.practicante');
+    Route::delete('/eliminar/{id}', 'destroy')->name('destroy.practicante');
 });
 
 

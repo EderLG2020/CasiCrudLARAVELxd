@@ -34,6 +34,14 @@ class HomeController extends Controller
             'escuela' => 'required'
         ]);
 
+        // $practicante= Practicante::created([
+        //     'nombre' => $request->nombre,
+        //     'edad' => $request->edad,
+        //     'correo_electronico' => $request->correo_electronico,
+        //     'fecha_de_nacimiento' => $request->fecha_de_nacimiento,
+        //     'carrera_tecnica' => $request->carrera_tecnica,
+        //     'escuela' => $request->escuela,
+        // ]);
         $practicante = new Practicante();
         $practicante->nombre = $request->nombre;
         $practicante->edad = $request->edad;
@@ -54,5 +62,11 @@ class HomeController extends Controller
     {
 
         return view("home.bienvenido", compact('nombre', 'alias'));
+    }
+
+
+    public function destroy($desId)
+    {
+        return 'sd';
     }
 }
